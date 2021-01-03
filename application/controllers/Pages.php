@@ -5,7 +5,7 @@ class Pages extends CI_Controller {
     {            
                 $this->load->model('cetba_model');
                 $data['polozky'] = $this->cetba_model->get_menu();
-
+                $data['knihovna'] = $this->db->query('SELECT * FROM kategorie ORDER BY id_kategorie')->result();
 		$this->load->view('templates/header', $data);                
 		$this->load->view('pages/home', $data);  
 		$this->load->view('templates/footer');

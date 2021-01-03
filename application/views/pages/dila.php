@@ -22,7 +22,6 @@
 
     <?php foreach ($knihovna as $knihovny) { ?>
         <tr>
-            <td><?= $knihovny->id_knihy; ?></td>
             <td><?= $knihovny->autor; ?></td>
             <td><?= $knihovny->nazev_knihy; ?></td>
             <td><?= $knihovny->kategorie_id_kategorie; ?></td>

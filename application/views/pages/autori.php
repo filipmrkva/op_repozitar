@@ -22,7 +22,6 @@
    <table class="table table-bordered table-striped table-dark">
         <?php foreach ($anotace as $text) { ?>
             <tr>
-                <td><?= $text->id_knihy; ?></td>
                 <td><?= $text->autor; ?></td>
                 <td class="text-center">
                     <a style="color:white" href="<?php echo base_url('pages/autoriKlik/'.$text->id_knihy) ?>">
