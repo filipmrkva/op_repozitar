@@ -68,3 +68,9 @@ Acknowledgement
 
 The CodeIgniter team would like to thank EllisLab, all the
 contributors to the CodeIgniter project and you, the CodeIgniter user.
+
+***************
+Odkaz na web
+***************
+
+Omlouvám se ale kvůli potížím s Endorou jsem nedokázal projekt na web nahrát. Podrobnější informace jsem vám napsal ve zprávě.
