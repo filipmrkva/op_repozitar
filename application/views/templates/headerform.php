@@ -43,8 +43,8 @@
      
      
     </ul>
-      <form action="<?php echo base_url("auth/login"); ?>">
-            <button type="submit">Přihlásit se</button>
+      <form action="<?php echo base_url("auth/logout"); ?>">
+            <button type="submit">Odhlásit se</button>
       </form>
   </div>
 </nav>

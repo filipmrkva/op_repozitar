@@ -43,9 +43,6 @@
      
      
     </ul>
-      <form action="<?php echo base_url("auth/login"); ?>">
-            <button type="submit">Přihlásit se</button>
-      </form>
   </div>
 </nav>
     </body>

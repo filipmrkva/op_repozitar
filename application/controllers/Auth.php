@@ -63,13 +63,18 @@ class Auth extends CI_Controller
 	 * Log the user in
 	 */
 	public function login()
-	{
-		$this->data['title'] = $this->lang->line('login_heading');
+	{                   
+                $this->load->model('cetba_model');
+                $data['polozky'] = $this->cetba_model->get_menu();
+                $this->load->view('templates/headerlogin', $data);
+            
+                
+                $this->data['title'] = $this->lang->line('login_heading');
 
 		// validate form input
 		$this->form_validation->set_rules('identity', str_replace(':', '', $this->lang->line('login_identity_label')), 'required');
 		$this->form_validation->set_rules('password', str_replace(':', '', $this->lang->line('login_password_label')), 'required');
-
+                
 		if ($this->form_validation->run() === TRUE)
 		{
 			// check to see if the user is logging in
@@ -111,7 +116,9 @@ class Auth extends CI_Controller
 			];
 
 			$this->_render_page('auth' . DIRECTORY_SEPARATOR . 'login', $this->data);
+                        
 		}
+                $this->load->view('templates/footer', $data);
 	}
 
 	/**
@@ -894,10 +901,10 @@ class Auth extends CI_Controller
             if($this->ion_auth->logged_in()){
                 $this->load->model('cetba_model');
                 $data['polozky'] = $this->cetba_model->get_menu();
-                $this->load->view('templates/header', $data);                
+                $this->load->view('templates/headerform', $data);                
 		$this->load->view('pages/formular', $data);  
 		$this->load->view('templates/footer');
             }
-        }
+        }                           
 
 }
