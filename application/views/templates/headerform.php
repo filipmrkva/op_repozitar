@@ -31,17 +31,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-          
-                <?php foreach($polozky as $p): ?>
-        <li class ="nav-item">
-        <a class="nav-link" href="<?php echo base_url('pages/')?><?=$p->polozka_menu?>"><?= $p->displej_nazev?><span class="sr-only h2">(current)</span></a>
-        </li>            
-
-    <?php endforeach; ?>
- 
-     
-     
+    
     </ul>
       <form action="<?php echo base_url("auth/logout"); ?>">
             <button type="submit">Odhlásit se</button>

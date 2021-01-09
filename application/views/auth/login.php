@@ -9,6 +9,10 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <link rel="stylesheet/less" type="text/css" href="styles.less">
         <script src="less.js" type="text/javascript"></script>
+        
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <style>
     body {
      text-align: center;
@@ -16,20 +20,23 @@
     </style>
     </head>
     <body style="background-color:lightblue;">
-        
-        
-<h1><?php echo lang('login_heading');?></h1>
-<p><?php echo lang('login_subheading');?></p>
-
-<div id="infoMessage"><?php echo $message;?></div>
-
-<?php echo form_open("auth/login");?>
+        <div class="row">
+        <div class="col-4">
+        </div>
+<br>
+<div class="col-4">
+<div class="card" style="width: 30rem;">
+	<div class="card-header prim-barva">
+		<h3 align="center">Přihlášení</h3>
+	</div>
+	<div class="card-body">
+    <?php echo form_open("auth/login");?>
 
   <p>
     <?php echo lang('login_identity_label', 'identity');?>
     <?php echo form_input($identity);?>
   </p>
-
+           
   <p>
     <?php echo lang('login_password_label', 'password');?>
     <?php echo form_input($password);?>
@@ -41,10 +48,17 @@
   </p>
 
 
-  <p><?php echo form_submit('submit', lang('login_submit_btn'));?></p>
+  <p><input class="btn btn-md text-light bg-primary" type="submit" id="login" value="Přihlásit"</p>
 
 <?php echo form_close();?>
 
 <p><a href="forgot_password"><?php echo lang('login_forgot_password');?></a></p>
-
+	</div>
+</div>
+    </div>
+    </div>
+        <div class="col-4">
+            
+        </div>
     </body>
+    

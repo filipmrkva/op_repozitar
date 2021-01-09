@@ -46,6 +46,9 @@
       <form action="<?php echo base_url("auth/login"); ?>">
             <button type="submit">Přihlásit se</button>
       </form>
+      <form action="<?php echo base_url("auth/create_user"); ?>">
+            <button type="submit">Zaregistrovat se</button>
+      </form>
   </div>
 </nav>
     </body>

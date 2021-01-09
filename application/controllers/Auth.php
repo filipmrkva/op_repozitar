@@ -468,11 +468,15 @@ class Auth extends CI_Controller
 	 */
 	public function create_user()
 	{
-		$this->data['title'] = $this->lang->line('create_user_heading');
+		$this->load->model('cetba_model');
+                $data['polozky'] = $this->cetba_model->get_menu();
+                $this->load->view('templates/headerlogin', $data);
+            
+                $this->data['title'] = $this->lang->line('create_user_heading');
 
 		if (!$this->ion_auth->logged_in() || !$this->ion_auth->is_admin())
 		{
-			redirect('auth', 'refresh');
+			//redirect('auth/', 'refresh');
 		}
 
 		$tables = $this->config->item('tables', 'ion_auth');
@@ -573,6 +577,7 @@ class Auth extends CI_Controller
 
 			$this->_render_page('auth' . DIRECTORY_SEPARATOR . 'create_user', $this->data);
 		}
+                $this->load->view('templates/footer', $data);
 	}
 	/**
 	* Redirect a user checking if is admin
